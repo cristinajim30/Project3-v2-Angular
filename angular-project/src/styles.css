@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     src: url('./assets/fonts/Poppins-Italic.ttf');
   }
 
@@ -19,7 +19,7 @@
 }
 
   body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     margin:0px!important;
   }
 

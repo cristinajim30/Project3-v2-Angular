@@ -3,6 +3,9 @@
     margin:20px;
     text-align: center;
 }
+#first_container{
+    margin-top: 60px;
+}
 
 #settings_container{
     justify-content: center;
@@ -11,7 +14,7 @@
     
 }
 h1{
-    /*font-size: 5rem;*/
+    
     color: #a958d6;
     
 }

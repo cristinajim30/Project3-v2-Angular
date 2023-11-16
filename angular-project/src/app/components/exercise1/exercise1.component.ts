@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-exercise1',
   templateUrl: './exercise1.component.html',
@@ -21,6 +22,7 @@ export class Exercise1Component {
 
   selectStyle(): void {
     this.fontSelected = this.optionSelected;
+    console.log("fontSelected: ", this.fontSelected);
 
   }
 
