@@ -1,0 +1,43 @@
+<div id="report_container">
+
+    <div id="first_container">
+        <h1>Bank Transaction Report</h1>
+        <p></p>
+
+    </div>
+    <div id="main_container">
+
+        <div class="filter_container">
+            <label for="lb_date">Date:</label>
+
+            <input type="date" id="f_date" name="date_field" />
+
+        </div>
+        <div class="table-responsive" >
+            <table class="table" >
+                <thead>
+                    <tr>
+                        <th *ngFor="let column of tableColumns" >{{ column }}</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let operation of transactionList">
+                    <tr>
+                        <td>{{operation.id}}</td>
+                      <td>{{operation.amount}}</td>
+                      <td>{{operation.balance}}</td>
+                      <td>{{operation.label}}</td>
+                      <td><td>{{operation.date}}</td>
+                    </tr>
+                   
+                  </tbody>
+            </table>
+
+        <!--<div *ngFor="let dato of transactionList">
+            <p>ID: {{ dato.id }}</p>
+            <p>amount: {{ dato.amount }}</p>
+            <p>Balance: {{ dato.balance }}</p>
+            <p>Label: {{ dato.label }}</p>
+            <p>Date: {{ dato.date }}</p>
+        </div>-->
+    </div>
+</div>
