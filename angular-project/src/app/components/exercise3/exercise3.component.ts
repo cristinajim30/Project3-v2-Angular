@@ -32,4 +32,7 @@ export class Exercise3Component {
     }
     );
   }
+  sortTable(colunmName: string){
+    console.log("column: ", colunmName);
+  }
 }

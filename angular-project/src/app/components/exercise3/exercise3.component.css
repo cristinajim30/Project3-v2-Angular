@@ -34,6 +34,9 @@
     font-size: 1.15rem;
     margin: 20px 0px;
 }
-.table_responsive{
-    
+td{
+    text-align: left;
+}
+th{
+    text-align: center!important;
 }

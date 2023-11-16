@@ -14,19 +14,20 @@
 
         </div>
         <div class="table-responsive" >
-            <table class="table" >
+            <table class="table"  >
+               
                 <thead>
                     <tr>
-                        <th *ngFor="let column of tableColumns" >{{ column }}</th>
+                        <th *ngFor="let column of tableColumns" (click) = "sortTable(column)">{{ column }}</th>
                     </tr>
                 </thead>
-                <tbody *ngFor="let operation of transactionList">
-                    <tr>
+                <tbody>
+                    <tr *ngFor="let operation of transactionList">
                         <td>{{operation.id}}</td>
                       <td>{{operation.amount}}</td>
                       <td>{{operation.balance}}</td>
                       <td>{{operation.label}}</td>
-                      <td><td>{{operation.date}}</td>
+                      <td>{{operation.date}}</td>
                     </tr>
                    
                   </tbody>
