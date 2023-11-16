@@ -1,0 +1,18 @@
+body {
+    min-height: 100vh;
+    font-size: 100%;
+    /*font-smooth: always;*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+  }
+  
+  
+  /*CSS container app.component*/
+  #page-container {
+    /*background-color: blue;*/
+    position: relative;
+    min-height: 100vh;
+    max-width: 100%;
+    min-width: 100%;
+  }

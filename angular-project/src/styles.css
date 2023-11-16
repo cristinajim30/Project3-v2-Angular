@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url('./assets/fonts/Poppins-Italic.ttf');
+  }
+
+  @font-face {
+    font-family: 'Roboto Mono', monospace;
+    src: url('./assets/fonts/RobotoMono-MediumItalic.ttf');
+  }
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('./assets/fonts/DancingScript-SemiBold.ttf');
+
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src:url('./assets/fonts/JosefinSans-LightItalic.ttf');
+}
+
+  body{
+    font-family: 'Poppins', sans-serif;
+    margin:0px!important;
+  }
+

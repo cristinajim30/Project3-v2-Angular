@@ -12,14 +12,14 @@ export class Exercise3Component {
   constructor(private transService: TransactionsService) {}
   ngOnInit(): void {
     this.getTransactions();
-    console.log("ngOnInit");
+    //console.log("ngOnInit");
     
   }
 
   getTransactions():void{
     this.transService.getJsonData().subscribe((data: any[]) => {
       this.transactionList = data;
-      console.log(this.transactionList); 
+      //console.log(this.transactionList); 
     }, error => {
       console.error('Error al cargar el JSON:', error);
     }
