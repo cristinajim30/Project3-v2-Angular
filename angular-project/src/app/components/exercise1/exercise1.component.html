@@ -1,1 +1,35 @@
-<p>exercise1 works!</p>
+<div id="first_container">
+    <h1 id="greeting" [style.font-family]="fontSelected" [style.fontSize.px]="numberSize" [style.textAlign]="aligmentSelected">Hello {{userName | uppercase }}</h1>
+    
+    
+</div>
+<div id="main_container">
+    <h2>Enter your name and choose your greeting preference</h2>
+    <div id="settings_container">
+        <label for="name">Firstname: </label>
+        <input class="field_firstname" id="firstname" [(ngModel)]="userName"  type="text" name="firstname" placeholder="Write your firstname"  />
+        <div class="preferences_container">
+            <div class="select_container">
+                <label for="font_style">Choose your favorite font family:</label>
+                <select class="list_fontfamily" name="font" id="select_ff" [(ngModel)]="optionSelected" (change)="selectStyle()" >
+                    <option *ngFor="let item of fontList" value="{{item}}">{{item}}</option>  
+                </select>
+            </div>
+            <div class="fsize_container">
+                <label for="size">Font-size: </label>
+                <input class="field_size" id="fsize" title="Number from 0 to 100" type="text" [(ngModel)]="inputSize" (keyup)="checkNumber($event)" name="fsize" placeholder="Write a size"  />
+                px
+            </div>
+            <div class="aligment_container">
+                <label for="aligment">Choose the font aligment: </label>
+                <label for="optionsAligment" *ngFor="let opt of aligmentList">
+                    <input class="field_aligment" id="fAlig_{{opt}}"  type="radio" [(ngModel)]="cbAligment" name="fAligment" value="{{opt}}" (change)="selectAligment()" /> {{opt}}
+                </label>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+

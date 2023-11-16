@@ -1,0 +1,12 @@
+.title_container{
+    margin:30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+h1{
+    font-size: 4rem;
+    color: #a958d6;
+    text-align: center;
+}
