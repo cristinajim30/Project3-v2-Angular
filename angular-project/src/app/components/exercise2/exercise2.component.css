@@ -1,0 +1,78 @@
+#first_container h1{
+    font-size: 4rem;
+    color: #a958d6;
+    text-align: center;
+}
+#first_container p{
+    font-size: 1.20rem;
+    text-align: center;
+    padding: 20px;
+}
+#first_container, #main_container{
+    justify-content: center;
+    margin:20px;
+    text-align: center;
+}
+#calculator_container{
+    display: flow-root;
+    justify-content: center;
+    text-align: center;
+    margin:30px;
+}
+#main_container{
+    display: flow-root;
+    width: auto;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px grey;
+}
+.result_container{
+    display: flow-root;
+    width: auto;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+.historic_container{
+    display: flow-root;
+    width: auto;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+.historic_container h1{
+    text-align: left;
+}
+.form-label {
+    margin: 10px;
+}
+input{
+    margin:10px;
+    width: auto;
+}
+select{
+    width: auto;
+}
+.butons_container{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    margin:15px;
+}
+.cards_container{
+    display: flex;
+    justify-content: flex-start;
+}
+.card{
+    margin: 40px;
+}
+#cleanOp{
+    margin:0px!important;
+}
+td{
+    align-items: center;
+}

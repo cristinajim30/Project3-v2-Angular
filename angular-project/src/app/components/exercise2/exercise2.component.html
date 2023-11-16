@@ -1,1 +1,61 @@
-<p>exercise2 works!</p>
+<div id="calculator_container">
+    <div id="first_container">
+        <h1>Calculator</h1>
+        <p>Enter the first and second number of the operation you want, as well as the type of operation (addition, subtraction, multiplication or division). Use the "calculate" button to see the result of the operation.
+           <br/> You can view the operation history below.</p>
+    </div>
+    <div id="main_container">
+        <div class="mb-3">
+            <label for="number_first" class="form-label">First number: </label>
+            <input id="n1" type="number" [(ngModel)]="inputN1" placeholder="Write the first number"  />
+        </div>
+
+        <div class="mb-3">
+          <label for ="operations" class="form-label">Choose the operation:</label>
+            <select  [(ngModel)]="selectedOperation">
+                <option *ngFor="let item of operationList" value="{{item}}">{{item}}</option> 
+            </select>
+          
+        </div>
+
+        <div class="mb-3">
+            <label for="number_second" class="form-label">Second number: </label>
+            <input type="number" [(ngModel)]="inputN2" placeholder="Write the second number" />
+        </div>
+        <div class="butons_container">
+            <div class="mb-3">
+              <button class="btn btn-success" (click)="calculate()">Calculate</button>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-danger" (click)="cleanCalculator()">Clean</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="result_container">
+  <h2 class="display_result">{{inicialResult}} </h2>
+</div>
+<div class="historic_container">
+  <h2>{{titleH2}}</h2>
+  <div class="table-responsive" [style.display]="isVisibleTable ? 'block' : 'none'" *ngIf="calculatorService.getOperations().length > 0">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th *ngFor="let column of tableColumns">{{ column }}</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let operation of calculatorService.getOperations()">
+            <tr>
+    
+              <td>{{operation.time}}</td>
+              <td>{{operation.id}}</td>
+              <td>{{operation.result}}</td>
+              <td><button class="btn btn-danger" id="cleanOp" (click)="cleanOperation(operation.id)">Clean Operation</button></td>
+            </tr>
+           
+          </tbody>
+    </table>
+  </div>
+
+</div>
+
