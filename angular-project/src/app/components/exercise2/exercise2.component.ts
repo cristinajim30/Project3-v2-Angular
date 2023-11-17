@@ -33,10 +33,7 @@ export class Exercise2Component {
     switch (this.selectedOperation) {
       case this.operationList[0]:
         //add
-        console.log("n1: ", this.number1)
-        console.log("n2: ", this.number2)
         this.result = this.number1 + this.number2;
-        console.log("result: ", this.result)
         break;
       case this.operationList[1]:
         //subtract
@@ -63,7 +60,6 @@ export class Exercise2Component {
   createOperation(result: number):void{
     const timeNow = new Date();
     const time = timeNow.getHours() + ':' +timeNow.getMinutes() + ':' + timeNow.getSeconds();
-    console.log("hora: ", time);
     const operation: Operations = {
       id: "Op-" + this.idOperation,
       time: time,
@@ -75,7 +71,6 @@ export class Exercise2Component {
   }
 
   displayTable():void{
-    //console.log("isVisible: ", this.isVisibleTable);
     if(this.calculatorService.getOperations().length != 0){
       this.titleH2= 'Historical Operations';
     }

@@ -18,6 +18,7 @@ export class Exercise3Component {
   //new object of the Commons Class
   icommon: Commons = new Commons;
   datetime:any = null;
+  
   ngOnInit(): void {
     this.datetime= this.icommon.getDate();
     this.getTransactions();
@@ -26,9 +27,8 @@ export class Exercise3Component {
   getTransactions():void{
     this.transService.getJsonData().subscribe((data: any[]) => {
       this.transactionList = data;
-      //console.log(this.transactionList); 
     }, error => {
-      console.error('Error al cargar el JSON:', error);
+      console.error('Error loading JSON:', error);
     }
     );
   }

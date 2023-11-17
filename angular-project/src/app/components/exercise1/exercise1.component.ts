@@ -22,7 +22,6 @@ export class Exercise1Component {
 
   selectStyle(): void {
     this.fontSelected = this.optionSelected;
-    //console.log("fontSelected: ", this.fontSelected);
 
   }
 
@@ -44,8 +43,7 @@ export class Exercise1Component {
       this.inputSize = '';
 
     } else{ //if number is valid
-      //console.log("es numero valido");
-      this.changeSize(); //call function to change size
+      this.changeSize(); 
     }
 
   }
