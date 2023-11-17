@@ -13,21 +13,22 @@
             <p>{{datetime}}</p>
 
         </div>
-        <div class="detail_container"  >
-           <!-- <ul class="list-group list-group-horizontal" >
-                <li class="list-group-item" *ngFor="let column of tableColumns">{{column}}</li>
-                <li class="list-group-item" *ngFor="let item of transactionDetail">{{item.value}}</li>
-              </ul>-->
-              <table class="table"  >
+        <div class="table-responsive"  >
+          
+              <table class="table table-bordered"  >
                 <thead>
                     <tr>
                         <th *ngFor="let column of tableColumns" >{{ column }}</th>
                     </tr>
                 </thead>
-                <tbody *ngFor="let item of transactionDetail | keyvalue" >
+                <tbody class="table-group-divider" >
                     <tr > 
-                        <td>{{item.value}}</td>
-                        
+                        <td>{{transactionDetail?.id}}</td>
+                        <td>{{transactionDetail?.amount}}</td>
+                        <td>{{transactionDetail?.balance}}</td>
+                        <td>{{transactionDetail?.label}}</td>
+                        <td>{{transactionDetail?.description}}</td>
+                        <td>{{transactionDetail?.date}}</td> 
                       
                     </tr>
                    
@@ -36,7 +37,9 @@
             
         </div>
             
-
+        <div class="button_container">
+            <button class="btn btn-secondary" [routerLink]="['/exercise3']" routerLinkActive="active">Back</button>
+        </div>
 
     </div>
 </div>

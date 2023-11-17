@@ -9,9 +9,9 @@ import { Commons } from '../../models/commons.model';
   styleUrl: './details.component.css'
 })
 export class DetailsComponent {
-  public id = '';
-  transactionDetail: any[]=[];
-  tableColumns: string[] =[];
+  public idTrans = '';
+  transactionDetail: any;
+  tableColumns: string[] = ['id', 'amount', 'balance', 'label', 'description', 'date'];
   // Variable to subscribe to the param coming from routing
   private sub: any;
 
@@ -24,14 +24,14 @@ export class DetailsComponent {
   
    ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.id = params['id'];
+      this.idTrans = params['id'];
       //console.log("id: ", this.id);
     });
     this.datetime= this.icommon.getDate();
     
     this.getDetails();
-    this.getKeys();
-    this.readTable();
+    //this.getKeys();
+    //this.readTable();
     
   }
 
@@ -40,7 +40,7 @@ export class DetailsComponent {
   }
 
   getDetails(): void {
-    this.service.getTransactionById(this.id).subscribe((data: any[]) => {
+    this.service.getTransactionById(this.idTrans).subscribe((data: any) => {
       this.transactionDetail = data;
       console.log(this.transactionDetail);
       
@@ -59,11 +59,9 @@ export class DetailsComponent {
     }
   }
   readTable():void{
-    console.log('entrys: ',this.transactionDetail.entries);
-    this.transactionDetail.forEach((item: { key: any; value:any }) => {
-      console.log('key: ',item.key);
-      console.log('value: ',item.value);
-    });
-    console.log(typeof this.transactionDetail);
+    console.log('Hola');
+    
+    console.log('item ',this.transactionDetail.id);
+   
   }
 }

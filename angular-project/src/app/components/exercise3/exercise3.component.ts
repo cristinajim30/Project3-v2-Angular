@@ -11,18 +11,16 @@ import { Commons } from '../../models/commons.model';
 export class Exercise3Component {
   transactionList: any[] = [];
   tableColumns: string[] = ['id', 'amount', 'balance', 'label', 'date'];
+  sortKey: string = '';
+  reverse: boolean = false;
+
   constructor(private transService: TransactionsService) {}
   //new object of the Commons Class
   icommon: Commons = new Commons;
   datetime:any = null;
   ngOnInit(): void {
-    //this.datetimeWithPipe = this.pipe.transform(Date.now(), 'EEEE, M/d/yy, hh:mm:ss a');
     this.datetime= this.icommon.getDate();
-    
-    console.log("fecha: ", this.datetime);
     this.getTransactions();
-    //console.log("ngOnInit");
-    
   }
 
   getTransactions():void{
@@ -34,7 +32,15 @@ export class Exercise3Component {
     }
     );
   }
-  sortTable(colunmName: string){
-    console.log("column: ", colunmName);
+  sortTable(key: string){
+    //function to sort table in ascending or descending order by key name
+    this.reverse = this.sortKey === key ? !this.reverse : false;
+    this.sortKey = key;
+    this.transactionList.sort((a, b) => {
+      const x = a[key];
+      const y = b[key];
+      return this.reverse ? (x > y ? -1 : 1) : (x < y ? -1 : 1)
+    });
   }
+  
 }

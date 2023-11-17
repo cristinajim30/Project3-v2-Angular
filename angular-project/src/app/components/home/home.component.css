@@ -6,7 +6,9 @@
 }
 
 h1{
-    font-size: 4rem;
-    color: #a958d6;
+    font-size: 5rem;
+    color: #008859;
     text-align: center;
+    position: absolute;
+    top: 40%;
 }

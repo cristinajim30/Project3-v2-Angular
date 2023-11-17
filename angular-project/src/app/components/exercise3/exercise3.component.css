@@ -1,7 +1,12 @@
 #first_container h1{
     font-size: 4rem;
-    color: #a958d6;
+    color: #008859;
     text-align: center;
+}
+#first_container p{
+    font-size: 1.20rem;
+    text-align: center;
+    padding: 20px;
 }
 
 #first_container, #main_container{
@@ -24,19 +29,22 @@
 }
 .datetime_container{
     width: auto;
-    /*margin:20px 0px;*/
     border-radius: 10px;
-    box-shadow: 0px 0px 6px grey;
+    box-shadow: 0px 0px 6px #63746a;
     padding:10px;
     margin-bottom:60px;
 }
 .datetime_container label{
     font-size: 1.15rem;
     margin: 20px 0px;
+    font-weight: 600;
 }
 td{
     text-align: left;
 }
 th{
     text-align: left!important;
+}
+.table-responsive{
+    margin: 10px;
 }

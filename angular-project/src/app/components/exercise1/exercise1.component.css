@@ -15,7 +15,7 @@
 }
 h1{
     
-    color: #a958d6;
+    color: #008859;
     
 }
 h2{
@@ -31,7 +31,7 @@ input{
     width: auto;
     color: rgb(73, 72, 72);
     border: none;
-    border-bottom: 1px solid rgb(144, 41, 158);;
+    border-bottom: 1px solid #03a776;
     outline: none;
     padding: 15px;
 }
@@ -40,7 +40,7 @@ select{
     width: auto;
     color: rgb(73, 72, 72);
     border: none;
-    border-bottom: 1px solid rgb(144, 41, 158);;
+    border-bottom: 1px solid #03a776;
     outline: none;
     padding: 15px;
     font-family: 'Poppins';
@@ -55,9 +55,12 @@ select{
     margin-bottom: 40px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 6px grey;
+    box-shadow: 0px 0px 6px #63746a;
 }
 .select_container, .fsize_container, .aligment_container{
     padding: 20px;
     margin:10px;
+}
+.field_aligment{
+    accent-color: #008859;
 }

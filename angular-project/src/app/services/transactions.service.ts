@@ -17,7 +17,7 @@ export class TransactionsService {
     return this.http.get<any[]>(this.transactionsUrl);
 
   }
-  getTransactionById(id: string):Observable<any[]> {
-    return this.http.get<any[]>(this.genericUrl + id + this.format);
+  getTransactionById(id: string):Observable<any> {
+    return this.http.get<any>(this.genericUrl + id + this.format);
   }
 }

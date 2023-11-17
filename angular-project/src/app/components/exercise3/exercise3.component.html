@@ -2,7 +2,7 @@
 
     <div id="first_container">
         <h1>Bank Transaction Report</h1>
-        <p></p>
+        <p>here you'll find a report with all our bank transactions, you can click on a transaction to open its detail.</p>
 
     </div>
     <div id="main_container">
@@ -14,14 +14,14 @@
 
         </div>
         <div class="table-responsive" >
-            <table class="table"  >
+            <table class="table table-bordered"  >
                 <thead>
                     <tr>
                         <th *ngFor="let column of tableColumns" (click) = "sortTable(column)">{{ column }}</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr *ngFor="let operation of transactionList" [routerLink]="['/transaction', operation.id]" routerLinkActive="active">
+                <tbody class="table-group-divider">
+                    <tr *ngFor="let operation of transactionList" [routerLink]="['/transaction', operation.id]" routerLinkActive="active" >
                         
                         <td>{{operation.id}} </td>
                       <td>{{operation.amount}}</td>
@@ -32,7 +32,10 @@
                    
                   </tbody>
             </table>
+
+            
         </div>
+       
 
     </div>
 </div>

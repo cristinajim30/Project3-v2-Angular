@@ -1,6 +1,6 @@
 #first_container h1{
     font-size: 4rem;
-    color: #a958d6;
+    color: #008859;
     text-align: center;
 }
 #first_container p{
@@ -27,7 +27,7 @@
     margin-bottom: 10px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 6px grey;
+    box-shadow: 0px 0px 6px #63746a;
 }
 .result_container{
     display: flow-root;
