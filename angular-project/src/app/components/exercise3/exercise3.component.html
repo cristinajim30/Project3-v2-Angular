@@ -10,20 +10,20 @@
         <div class="datetime_container">
             <label for="lb_date">Date and Time:</label>
 
-            <p>{{datetimeWithPipe}}</p>
+            <p>{{datetime}}</p>
 
         </div>
         <div class="table-responsive" >
             <table class="table"  >
-               
                 <thead>
                     <tr>
                         <th *ngFor="let column of tableColumns" (click) = "sortTable(column)">{{ column }}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let operation of transactionList">
-                        <td>{{operation.id}}</td>
+                    <tr *ngFor="let operation of transactionList" [routerLink]="['/transaction', operation.id]" routerLinkActive="active">
+                        
+                        <td>{{operation.id}} </td>
                       <td>{{operation.amount}}</td>
                       <td>{{operation.balance}}</td>
                       <td>{{operation.label}}</td>
@@ -32,7 +32,7 @@
                    
                   </tbody>
             </table>
-
+        </div>
 
     </div>
 </div>

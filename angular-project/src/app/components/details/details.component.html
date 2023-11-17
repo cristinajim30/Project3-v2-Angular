@@ -1,0 +1,42 @@
+<div id="report_container">
+
+    <div id="first_container">
+        <h1>Transaction Detail</h1>
+        <p></p>
+
+    </div>
+    <div id="main_container">
+
+        <div class="datetime_container">
+            <label for="lb_date">Date and Time:</label>
+
+            <p>{{datetime}}</p>
+
+        </div>
+        <div class="detail_container"  >
+           <!-- <ul class="list-group list-group-horizontal" >
+                <li class="list-group-item" *ngFor="let column of tableColumns">{{column}}</li>
+                <li class="list-group-item" *ngFor="let item of transactionDetail">{{item.value}}</li>
+              </ul>-->
+              <table class="table"  >
+                <thead>
+                    <tr>
+                        <th *ngFor="let column of tableColumns" >{{ column }}</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let item of transactionDetail | keyvalue" >
+                    <tr > 
+                        <td>{{item.value}}</td>
+                        
+                      
+                    </tr>
+                   
+                  </tbody>
+            </table>
+            
+        </div>
+            
+
+
+    </div>
+</div>
