@@ -16,13 +16,13 @@ export class Exercise1Component {
   fontSelected: string = this.fontList[0];
   numberSize: any = 60; //size by default
   inputSize: string = ''; // Recovering the input value
-  cbAligment: string = this.aligmentList[1]; //check this radio by default
-  aligmentSelected: string = this.aligmentList[1]; //aligment by default
+  cbAligment: string = this.aligmentList[1]; //check this radio (center) by default
+  aligmentSelected: string = this.aligmentList[1]; //aligment center by default
 
 
   selectStyle(): void {
     this.fontSelected = this.optionSelected;
-    console.log("fontSelected: ", this.fontSelected);
+    //console.log("fontSelected: ", this.fontSelected);
 
   }
 
@@ -44,7 +44,7 @@ export class Exercise1Component {
       this.inputSize = '';
 
     } else{ //if number is valid
-      console.log("es numero valido");
+      //console.log("es numero valido");
       this.changeSize(); //call function to change size
     }
 
